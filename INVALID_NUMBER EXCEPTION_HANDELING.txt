@@ -1,0 +1,16 @@
+DECLARE
+    num1 int;
+    num2 int;
+    ans int;
+BEGIN
+    num1:='&num1';
+    num2:='&num2';
+    ans:=num1+num2;
+    dbms_output.put_line(ans);
+EXCEPTION
+    WHEN INVALID_NUMBER THEN
+     dbms_output.put_line('ERROR FOR INVALID NUMBER');
+    WHEN OTHERS THEN
+     dbms_output.put_line('ERROR FOR INVALID NUMBER ERROR');
+END;
+/
