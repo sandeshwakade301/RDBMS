@@ -1,0 +1,14 @@
+DECLARE
+   a number;
+   b number;
+   ans number;
+BEGIN
+   a:=&a;
+   b:=&b;
+   ans:=a/b;
+   dbms_output.put_line(ans);
+EXCEPTION
+   WHEN ZERO_DIVIDE THEN
+    DBMS_OUTPUT.PUT_LINE('ERROR FOR ZERO_DIVIDE');
+END;
+/ 
