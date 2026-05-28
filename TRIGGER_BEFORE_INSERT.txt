@@ -1,0 +1,10 @@
+create table emp(eno int primary key,
+ename char(20),
+sal float);
+
+create or replace trigger T1 before insert
+on emp for each row
+BEGIN 
+  DBMS_OUTPUT.PUT_LINE('RECORD INSERT');
+END;
+/

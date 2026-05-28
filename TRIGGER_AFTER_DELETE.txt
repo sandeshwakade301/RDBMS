@@ -1,0 +1,14 @@
+create table emp(eno int primary key,
+ename char(20),
+sal float);
+
+create or replace trigger T1 BEFORE DELETE
+on emp for each row
+BEGIN 
+  INSERT INTO RECYCLE VALUES(:OLD.ENO,:OLD.ENAME,:OLD.SAL);
+END;
+/
+
+create table recycle(eno int primary key,
+ename char(20),
+sal float);
