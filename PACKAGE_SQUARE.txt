@@ -1,0 +1,27 @@
+CREATE OR REPLACE PACKAGE P1
+AS 
+     PROCEDURE SQUARE(NUM IN INT,ANS OUT INT);    
+     PROCEDURE CUBE(NUM IN INT,ANS OUT INT);
+END P1;
+
+     CREATE OR REPLACE PACKAGE BODY P1
+     AS
+
+     PROCEDURE SQUARE(NUM IN INT,ANS OUT INT)
+     IS
+          
+          BEGIN
+
+                ANS:=NUM*NUM;
+                                 
+     END SQUARE;
+          
+                      
+      PROCEDURE CUBE(NUM IN INT, ANS OUT INT)                     
+      IS
+           BEGIN
+           ANS:=NUM*NUM*NUM;
+                    
+         END CUBE;
+ END P1;
+/
