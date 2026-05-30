@@ -1,0 +1,21 @@
+create or replace package p1 
+AS 
+   procedure even_odd(num in int);
+END p1;
+/
+
+create or replace package body p1
+AS 
+   procedure even_odd(num in int)
+IS
+   BEGIN
+     if num mod 2=0 then
+       dbms_output.put_line('even='||num);
+     else
+       dbms_output.put_line('odd='||num);
+     end if;
+
+END even_odd;
+END p1;
+
+exec p1.even_odd(2);
